@@ -250,7 +250,7 @@ Through this project, I gained practical experience in:
 
 This project is hosted on GitHub as a public repository.
 
-**Repository:** `workshop-registration-studentnumber`
+**Repository:** `workshop-registration-S25D14/034`
 
 ---
 
