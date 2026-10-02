@@ -8,16 +8,19 @@ const seats = document.getElementById("seats");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const feedback = document.getElementById("feedback");
+const resetButton = document.getElementById("resetButton");
 
 // JS1: Add the three workshop names, then create one <option> per workshop.
 const workshops = [
   "HTML ESSENTIALS",
   "CSS STUDIO",
-  "JAVASCRIPT LAB"
+  "JAVASCRIPT LAB",
+  "Web Design Workshop"
 ];
 workshops[0]
 workshops[1]
 workshops[2]
+workshops[3]
 
 for (const workshop of workshops) {
   const option = document.createElement("option");
@@ -51,6 +54,19 @@ form.addEventListener("submit", (event) => {
     fullName.setCustomValidity("");
   }
 
+  resetButton.addEventListener("click", () => {
+  form.reset();
+
+  fullName.setCustomValidity("");
+  password.setCustomValidity("");
+  confirmPassword.setCustomValidity("");
+
+  feedback.textContent = "";
+  feedback.hidden = true;
+  feedback.className = "feedback";
+
+  form.classList.remove("was-validated");
+});
   if (password.value.length < 10) {
     password.setCustomValidity("Use at least 10 characters for this exercise.");
   } else {
@@ -65,6 +81,7 @@ if (password.value !== confirmPassword.value) {
 } else {
   confirmPassword.setCustomValidity("");
 }
+
 // Set a custom validity message when they do not match, and clear it when they match.
 
   // JS3 TEMPORARY GUARD: Remove this entire block and replace it with reportValidity().

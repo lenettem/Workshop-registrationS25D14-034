@@ -246,6 +246,46 @@ Through this project, I gained practical experience in:
 
 ---
 
+## Extensions Added
+
+After completing the core workshop registration requirements, two additional features were added as extensions to the project.
+
+### 1. Fourth Workshop
+
+A fourth workshop was added to the workshop array in `app.js`.
+
+The available workshops are now:
+
+- HTML ESSENTIALS
+- CSS STUDIO
+- JAVASCRIPT LAB
+- Web Design Workshop
+
+The JavaScript `for...of` loop automatically creates an option in the workshop dropdown for each item in the array.
+
+### 2. Reset Button
+
+A Reset button was added to the registration form.
+
+The Reset button clears:
+
+- All entered form information
+- Custom validity messages
+- Registration feedback
+- The `was-validated` form class
+
+The Reset functionality was implemented using JavaScript together with the HTML reset button.
+
+### Extension Testing
+
+The extensions were tested in the browser to confirm that:
+
+1. The fourth workshop appears in the workshop dropdown.
+2. The Reset button clears the entered form information.
+3. Password validation messages are cleared after resetting.
+4. Success or error feedback disappears after resetting.
+5. The `was-validated` class is removed after resetting.
+
 ## GitHub Repository
 
 This project is hosted on GitHub as a public repository.
